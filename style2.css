@@ -1,0 +1,345 @@
+/* popup widow */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+.popup-container
+{
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    width: 400px;
+    transform: translateX(-50%);
+    background-color: rgba(10, 50, 79, 0.877);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-family:'Poppins',sans-serif;
+    background-size: cover;
+    border-radius:px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0,.6);
+    opacity: 1;
+    transition: all 0.6s;
+    margin-top: 30px;
+
+}
+.popup-container.active
+{
+    visibility: hidden;
+    opacity: 0;
+    top: 10%;
+}
+
+.popup-container .signup
+{
+    color: rgb(209, 209, 209);
+      
+}
+.popup-container p{
+    padding: 4px;
+    font-size: small;
+}
+.flow-hidden.active
+{
+    overflow: hidden;
+}
+.popup-container h4{
+    font-size: 30px;
+    margin: 10px 0;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+label
+{
+    color: white;
+    font-family: sans-serif;
+    font-size: small;
+}
+.popup-btn
+{
+    background-color: rgb(46, 110, 158);
+    padding: 9px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+
+    color: white;
+    width: 50%;
+    margin-left: 90px;
+}
+.input
+{
+    padding: 7px;
+    margin: 10px 0;
+    font-size: 15px;
+    text-align: center;
+    background-color: rgb(39, 79, 108);
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;
+}
+.input:focus
+{
+    outline: none;
+}
+.close-icon
+{
+    position: relative;
+    left: 180px;
+    color: white;
+    top: -6px;
+    cursor: pointer;
+}
+.close-icon:hover
+{
+    color: rgb(101, 186, 255);
+}
+.blur-div.active
+{
+    filter: blur(5px) brightness(.8);
+}
+.blur-body.active
+{
+    overflow: hidden;
+   
+}
+.popup-container .signup
+{
+    color: rgb(209, 209, 209);
+    text-decoration: underline;
+}
+
+
+@media(max-width:991px)
+{
+    .popup-container
+    {
+    position: absolute;
+    left: 50%;
+    top: 1%;
+    width: 270px;
+    transform: translateX(-50%);
+    background-color: rgba(10, 50, 79, 0.877);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-family:'Poppins',sans-serif;
+    background-size: cover;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0,.6);
+    opacity: 1;
+    transition: all 0.6s;
+    margin-top: 140px;
+   }
+   .popup-container .signup
+{
+    color: rgb(209, 209, 209);
+    font-size: small;
+}
+   
+   .popup-container.active
+   {
+       visibility: hidden;
+       opacity: 0;
+       top: 10%;
+   }
+   
+   .popup-container .signup
+   {
+       color: rgb(209, 209, 209);
+       text-decoration: underline;
+   }
+   .popup-container p{
+       padding: 4px;
+       font-size: small;
+   }
+   .flow-hidden.active
+   {
+       overflow: hidden;
+   }
+   .popup-container p 
+   {
+         color: rgb(225, 225, 225);
+         padding: 1px;
+         padding-top: 3px;
+   }
+   .popup-container h4{
+       font-size: 20px;
+       margin: 5px 0;
+       font-family: sans-serif;
+       color: rgb(255, 255, 255);
+       font-weight: 500;
+   }
+   label
+   {
+       color: white;
+       font-family: sans-serif;
+       font-size: small;
+   }
+   .popup-btn
+   {
+       background-color: rgb(46, 110, 158);
+       padding: 5px;
+       font-size: 15px;
+       cursor: pointer;
+       border: none;
+       border-radius: px;
+       color: white;
+       width: 50%;
+       margin-left: 60px;
+   }
+   .input
+   {
+       padding: 3px;
+       margin: 10px 0;
+       font-size: 12px;
+       text-align: center;
+       color: whi;
+   }
+   .input:focus
+   {
+       outline: none;
+   }
+   .close-icon
+   {
+       position: relative;
+       left: 120px;
+       color: rgb(255, 255, 255);
+       top: -2px;
+       cursor: pointer;
+   }
+   .close-icon:hover
+   {
+       color: rgb(101, 186, 255);
+   }
+
+}
+
+/* text-intro css */
+
+.intro-text
+{
+    margin-left: 130px;
+    
+}
+.intro-text-flex
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.intro-text h1
+{
+    text-align: center;
+    font-size: 40px;
+    padding: 5px;
+    font-weight: 500;
+    color: rgb(0, 24, 39);
+}
+.intro-text .notes
+{
+    margin: 10px;
+    padding-top: 20px;
+}
+.right-icon
+{
+    color: green;
+}
+.intro-text h3{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: rgb(0, 133, 235);
+}
+.intro-text .notes p
+{
+    margin-left: 3px;
+    color: rgb(82, 82, 82);
+    width: 100%;
+    padding-bottom: 30px;
+}
+.feture-icon img
+{
+  width: 300px;
+}
+
+
+
+@media(max-width:991px)
+{
+    .intro-text h1
+    {
+        
+        font-size: 17px;
+        font-weight: 500;
+        text-align: center;
+        
+    }      
+    .intro-text
+    {
+        margin-left: 10px;
+        
+    }
+    .feture-icon img
+    {
+      width: 200px;
+    }
+    .intro-text-flex
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0px;
+        flex-wrap: wrap;
+    }
+    .intro-text .notes
+    {
+        margin: 10px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+    .intro-text .notes p
+    {
+        color: rgb(82, 82, 82);
+        width: 100%;
+        padding-bottom: 13px;
+        font-size: small;
+    }
+    .intro-text h3{
+        gap: 5px;
+        color: rgb(0, 133, 235);
+        font-size: small;
+    }
+    .maindiv
+    {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .maindiv .heading h1
+    {
+         font-size: 30px;
+    }
+    
+    .maindiv .heading h4
+    {
+         font-size: 18px;
+    }
+    .maindiv .sub2
+    {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .main-body
+    {
+        overflow: hidden;
+        
+    }
+    body
+    {
+        overflow-x: hidden;
+    }
+
+}

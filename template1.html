@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cvsort-template1</title>
+    <link rel="shortcut icon"  href="img/mylogo.png">
+    <!-- home page css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- template1.css -->
+    <link rel="stylesheet" href="template1.css">
+    <!-- icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- menu bar -->
+    <nav class="navbar">  
+        <!-- <label class="logo"> <span class="cv">CV</span><span class="sort"><em>sort</em></span></label> -->
+        <div class="logo-flex">
+            <img class="cvsort-logo" src="img/mylogo.png" alt="Logo">
+            <p><span class="cv">CV</span><span class="sort">sort</span></p>
+        </div>
+        <a href="#" class="toggle-btn">
+            <span class="bar"></span>
+            <span class="bar" id="second"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="nav-menu">
+            <ul> 
+                <li><a href="index.html">home</a></li>                  
+                <li><a href="#">skills</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="nav-login-btn">Login</a></li>
+            </ul>
+        </div>
+    </nav> 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Footer-->
+<div class="bdyy">
+    <footer>
+            <div class="conta">
+              <div class="sec aboutus" id="pro">
+                  <h2 class="bugpill"><span class="bug">BUG</span>Pill</h2>
+                  <p>This is our new baby :) ,Yes u heard right our new startup
+                      'Bugpill'. We are small in team having big dream for our nation
+                      and for the new mind & idea thanks for reaching to us.
+                  </p>
+                  <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/bugpill_/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UC7CCkfrttWpFgKm3pRoahSA/videos" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+              </div>
+              <div class="sec contact" id="left">
+                <h2 class="qlink">Contact Info</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-sharp fa-solid fa-location-dot"></i></span>
+                        <span>Karnataka,Vijayapur <br> 586101<br></span>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <P><a href="tel:7975357744">+91 7975357744</a></P> 
+                        
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="mail:bugpillltd@gmail.com">bugpillltd@gmail.com</a></p>
+                    </li>
+                </ul>
+             </div>            
+        </div>
+    </footer>
+</div>
+<div class="CopyRightText">
+    <e>Copyright © 2022 CVsort All Right Reserved</e>
+</div>
+<!--Footer end-->
+
+
+
+
+</body>
+<!-- toggle-btn script -->
+<script type="text/javascript">
+    const toggleBtn=document.getElementsByClassName("toggle-btn")[0]
+    const navmenu=document.getElementsByClassName("nav-menu")[0] 
+
+    toggleBtn.addEventListener("click",()=>{
+        navmenu.classList.toggle("active")
+    })
+</script>
+<script src="swiper-bundle.min.js"></script>
+</html>

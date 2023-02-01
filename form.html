@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <link rel="stylesheet" href="template1.css">
+</head>
+<body id="body-main">
+    <div class="progressive-container " id="progressive-cont">
+        <!-- status  -->
+            <div class="point-container" id="pointcontainer">
+                <div class="page-status">
+                    <button id="one" class="radio active" onclick="changeColor('one')">1</button>
+                </div>
+                <div id="line" class="line"></div>
+
+
+            <div class="page-status" >
+                <button id="two" class="radio" onclick="changeColor('two')">2</button>
+            </div>
+                <div id="line" class="line"></div>
+
+                <div class="page-status">
+                    <button id="three" class="radio" onclick="changeColor('three')">3</button>
+                </div>
+                <div id="line" class="line"></div>
+        
+            <div class="page-status">
+                <button type="button" id="four" class="radio" onclick="changeColor('four')">4</button>
+            </div>
+          </div>
+            <!-- status steps-->
+            <div class="stages-page">
+                <span class="p1">Personal Details</span>
+                <span class="p2">Education</span>
+                <span class="p3">Experience</span>
+                <span class="p4">Download</span>
+            </div>
+    </div>
+
+    <div class="container" id="main-container">
+        <header>Let Us Know About You</header>
+
+        <form action="#" id="form-container">
+     <!-- First form -->
+            <div class="form first" id="first-Form">
+                <div class="details personal">
+                     <span class="title">PERSONAL DETAILS</span>
+       
+                     <div class="image-container">
+                        
+                        <input type="file" id="img-tag" hidden required>
+                        <label for="img-tag"><img id="download-img" src="download (1).png" alt=""></label>
+                        <label for="img-tag" id="upload-label">Upload Image <span class="required">*</span></label>
+                     </div>
+
+                     <div class="fields">
+                        <div class="input-field">
+                            <label for="">Full Name<span class="required">*</span></label>
+                           <input id="MyName" type="text" placeholder="Enter Your Nmae" required>
+                        </div>
+                     
+                        <div class="input-field">
+                            <label for="">Date of Birth<span class="required">*</span></label>
+                           <input id="DOB" type="date" placeholder="Enter birth date" required>
+                        </div>
+                     
+                        <div class="input-field">
+                            <label for="">Email<span class="required">*</span></label>
+                           <input  id="MyEmail" type="email" placeholder="Example@gmail.com" required>
+                        </div>
+                     </div>
+
+                     
+                     <div class="fields">
+                        <div class="input-field">
+                            <label for="">Phone No<span class="required">*</span></label>
+                           <input id="MyPhoneNo" type="number" placeholder="Enter contact Number" required>
+                        </div>
+                     
+                        <div class="input-field">
+                            <label for="">Address<span class="required">*</span></label>
+                           <input id="MyAddress" type="text" placeholder="Enter Your current Address" required>
+                        </div>
+                     
+                        <div class="input-field">
+                            <label for="">Pincode<span class="required">*</span></label>
+                           <input id="MyPincode" type="number" placeholder="City Pincode" required>
+                        </div>
+                        
+                     </div>
+                 </div>
+                 <div class="careerObj">
+                    <label for="" class="aboutyou">About You<span class="required">*</span></label>                    
+                    <textarea  name="" id="textAreaT" placeholder="Write something about you..."></textarea>
+                 </div>
+                <!-- SEction for adding hobbies -->
+                        <!-- Adding Hobbie tag -->
+                      <div>
+                    <!-- Adding Hobbiee tag -->
+                        <span class="title skill">HOBBIES</span>
+                        <div class="skill-container" id="tagForm2">
+                                <div class="tag-container">
+                                    <label for="" id="error2"></label>
+                                    <div class="input-container">
+                                        <input type="text"  id="name2" placeholder="Enter Skills...">
+                                        <button type="button" value="clear" id="btnClick1" onclick="addMoreHobbie()">Add</button>
+                                        
+                                    </div>
+                                    <div>
+                                        <ul class="tags" id="box2">
+
+                                    
+                                        </ul> 
+                                    </div>
+                                </div>
+                        </div>
+                      </div>
+                 <!-- SEction for adding hobbies -->
+                 <div class="btn">
+                    <button type="button" id="first-next-btn" onclick="generateCV(),SetImageToTemplate(),SetHobbieToTemplate()">Next <span>&#8594</span></button>
+                 </div>
+            </div>
+            <!-- second form Education  -->
+                    <div class="form second hidden" id="second-form">
+
+                        <div class="CarrerObjectives" id="CareerObj">
+                            <span class="title">CAREER OBJECTIVE</span>
+                            <textarea   name="" id="careerobj-textarea" class="careerobjtextarea" placeholder="Enter Career Objective .."></textarea>
+                        </div>
+                        <div class="CarrerObjectives" id="ResumeTitle">
+                            <span class="title">RESUME TITLE</span>
+                            <textarea   name="" id="Resume-Title-textarea" class="careerobjtextarea" placeholder="Eg : Software Engineer, Computer Application"></textarea>
+                        </div>
+                        
+                        <div class="details personal">
+
+                            <span class="title">EDUCATION 1<span class="required">*</span> </span>
+                            
+                            <div class="fields">
+                                <div class="input-field">
+                                    <label for="">Degree<span class="required">*</span></label>
+                                <select name="degree" id="degree" class="dropdown">
+                                    <option value="">Select</option>
+                                    <option value="10th">10th</option>
+                                    <option value="12th">12th</option>
+                                    <option value="BA">BA</option>
+                                    <option value="BCA">BCA</option>
+                                    <option value="BE">BE</option>
+                                    <option value="B.Tech">B.Tech</option>
+                                    <option value="B.Sc">B.Sc</option>
+                                    <option value="B.com">B.com</option>
+                                    <option value="MCA">MCA</option>
+                                    <option value="M.Tech">M.Tech</option>
+                                    <option value="M.Sc">M.Sc</option>
+                                    <option value="M.com">M.com</option>
+                                    <option value="UG">UG</option>
+                                    <option value="PG">PG</option>
+                                    <option value="Diploma">Diploma</option>
+                                </select>
+                                </div>
+                            
+                                <div class="input-field">
+                                    <label for="">School Name</label>
+                                <input  id="FirstSchoolName" type="text" placeholder="Enter School Name" required>
+                                </div>
+                            
+                                <div class="input-field">
+                                    <label for="">School Location</label>
+                                <input id="FirstScLoc" type="email" placeholder="Enter Location" required>
+                                </div>
+                            </div>
+
+                            
+                            <div class="fields">
+                                <div class="input-field">
+                                    <label for="">Start Month<span class="required">*</span></label>
+                                    <select name="" id="FirstEduSM" class="dropdown">
+                                        <option value="">Select Month</option>
+                                        <option value="Jan">January</option>
+                                        <option value="Feb">February</option>
+                                        <option value="Mar">march</option>
+                                        <option value="Apr">April</option>
+                                        <option value="May">May</option>
+                                        <option value="Jun">June</option>
+                                        <option value="Jul">July</option>
+                                        <option value="Aug">August</option>
+                                        <option value="Sep">September</option>
+                                        <option value="Oct">October</option>
+                                        <option value="Nov">November</option>
+                                        <option value="Dec">December</option>
+                                    </select>
+                                </div>
+                            
+                                <div class="input-field">
+                                    <label for="">Start Year<span class="required">*</span></label>
+                                <input type="number" id="FirstEduSY" placeholder="Enter year" required>
+                                </div>
+                            
+                                <div class="input-field">
+                                    <label for="">End Month<span class="required">*</span></label>
+                                    <select name="" id="FirstEduEM" class="dropdown">
+                                        <option value="">Select Month</option>
+                                        <option value="Jan">January</option>
+                                        <option value="Feb">February</option>
+                                        <option value="Mar">march</option>
+                                        <option value="Apr">April</option>
+                                        <option value="May">May</option>
+                                        <option value="Jun">June</option>
+                                        <option value="Jul">July</option>
+                                        <option value="Aug">August</option>
+                                        <option value="Sep">September</option>
+                                        <option value="Oct">October</option>
+                                        <option value="Nov">November</option>
+                                        <option value="Dec">December</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="fields">
+                                <div class="input-field">
+                                    <label for="">End Year<span class="required">*</span></label>
+                                <input type="number" id="FirstEduEY" placeholder="Enter " required>
+                                </div>
+                            
+                                <div class="input-field">
+                                    <label for="">Field of study<span class="required">*</span></label>
+                                <input type="text" id="first-FieldOfStudy" placeholder="Enter Field of Study" required>
+                                </div>
+                            
+                                <div class="input-field">
+                                    <label for="">Persentage / CGPA<span class="required">*</span></label>
+                                <input type="number" id="PersentCGPA" placeholder="City Pincode" required>
+                                </div>
+                            </div>
+            <!--add Education btn-->
+                            <!-- <p id="add-education" onclick="addEducationElements()"><span class="addPlus">&#43</span> Add Education </p> -->
+                            <hr>
+                        </div>
+                    </div> 
+        <!--Education 2nd optional  -->
+        <div class="form second education hidden" id="second-education-form1">
+            <div class="details personal">
+
+                
+                <div class="delete-btn-container">
+                    <span class="title">EDUCATION 2</span>
+                    <span class="close-btn" onclick="deleteItems(1),hideEdu1(1)" id="1">&#215</span>
+                </div>
+                
+                <div class="fields">
+                    
+                    <div class="input-field">
+                        <label for="">Degree<span class="required">*</span></label>
+                    <select name="" id="degree2" class="dropdown">
+                        <option value="">Select</option>
+                        <option value="10th">10th</option>
+                        <option value="12th">12th</option>
+                        <option value="BA">BA</option>
+                        <option value="BCA">BCA</option>
+                        <option value="BE">BE</option>
+                        <option value="B.Tech">B.Tech</option>
+                        <option value="B.Sc">B.Sc</option>
+                        <option value="B.com">B.com</option>
+                        <option value="MCA">MCA</option>
+                        <option value="M.Tech">M.Tech</option>
+                        <option value="M.Sc">M.Sc</option>
+                        <option value="M.com">M.com</option>
+                        <option value="UG">UG</option>
+                        <option value="PG">PG</option>
+                        <option value="Diploma">Diploma</option>
+                    </select>
+                    </div>
+                
+                    <div class="input-field"> 
+                        <label for="">School Name</label>
+                    <input type="text" id="SecondSchoolName" placeholder="Enter School Name" required>
+                    </div>
+                
+                    <div class="input-field">
+                        <label for="">School Location</label>
+                    <input type="email" id="SecondScLoc" placeholder="Enter Location" required>
+                    </div>
+                </div>
+
+                
+                <div class="fields">
+                    <div class="input-field">
+                        <label for="">Start Month<span class="required">*</span></label>
+                        <select name="" id="SecondEduSM" class="dropdown">
+                            <option value="">Select Month</option>
+                            <option value="Jan">January</option>
+                            <option value="Feb">February</option>
+                            <option value="Mar">march</option>
+                            <option value="Apr">April</option>
+                            <option value="May">May</option>
+                            <option value="Jun">June</option>
+                            <option value="Jul">July</option>
+                            <option value="Aug">August</option>
+                            <option value="Sep">September</option>
+                            <option value="Oct">October</option>
+                            <option value="Nov">November</option>
+                            <option value="Dec">December</option>
+                        </select>
+                    </div>
+                
+                    <div class="input-field">
+                        <label for="">Start Year<span class="required">*</span></label>
+                    <input type="number" id="SecondEduSY" placeholder="Enter year" required>
+                    </div>
+                
+                    <div class="input-field">
+                        <label for="">End Month<span class="required">*</span></label>
+                        <select name="" id="SecondEduEM" class="dropdown">
+                            <option value="">Select Month</option>
+                            <option value="Jan">January</option>
+                            <option value="Feb">February</option>
+                            <option value="Mar">march</option>
+                            <option value="Apr">April</option>
+                            <option value="May">May</option>
+                            <option value="Jun">June</option>
+                            <option value="Jul">July</option>
+                            <option value="Aug">August</option>
+                            <option value="Sep">September</option>
+                            <option value="Oct">October</option>
+                            <option value="Nov">November</option>
+                            <option value="Dec">December</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="fields">
+                    <div class="input-field">
+                        <label for="">End Year<span class="required">*</span></label>
+                    <input type="number" id="SecondEduEY" placeholder="Enter " required>
+                    </div>
+                
+                    <div class="input-field">
+                        <label for="">Field of study<span class="required">*</span></label>
+                    <input type="text" id="SecondFieldOfStudy" placeholder="Enter Field of Study" required>
+                    </div>
+                
+                    <div class="input-field">
+                        <label for="">Persentage / CGPA<span class="required">*</span></label>
+                    <input type="number" id="SecondPersentCGPA" placeholder="City Pincode" required>
+                    </div>
+                </div>
+        <!--add Education btn-->
+                <!-- <p id="add-education" onclick="addEducationElements()"><span class="addPlus">&#43</span> Add Education </p> -->
+                <hr>
+            </div>
+        </div>
+<!--Education 3rd optional  -->
+        <div class="form second education hidden" id="second-education-form2">
+            <div class="details personal">
+
+                <div class="delete-btn-container">
+                    <span class="title">EDUCATION 3</span> 
+                    <span class="close-btn" onclick="deleteItems(2),hideEdu2(1)" id="2">&#215</span>
+                </div>
+
+                <div class="fields">
+                    <div class="input-field">
+                        <label for="">Degree<span class="required">*</span></label>
+                    <select name="degree" id="degree3" class="dropdown">
+                        <option value="">Select</option>
+                        <option value="10th">10th</option>
+                        <option value="12th">12th</option>
+                        <option value="BA">BA</option>
+                        <option value="BCA">BCA</option>
+                        <option value="BE">BE</option>
+                        <option value="B.Tech">B.Tech</option>
+                        <option value="B.Sc">B.Sc</option>
+                        <option value="B.com">B.com</option>
+                        <option value="MCA">MCA</option>
+                        <option value="M.Tech">M.Tech</option>
+                        <option value="M.Sc">M.Sc</option>
+                        <option value="M.com">M.com</option>
+                        <option value="UG">UG</option>
+                        <option value="PG">PG</option>
+                        <option value="Diploma">Diploma</option>
+                    </select>
+                    </div>
+                
+                    <div class="input-field">
+                        <label for="">School Name</label>
+                    <input type="text" id="ThirdSchoolName" placeholder="Enter School Name" required>
+                    </div>
+                
+                    <div class="input-field">
+                        <label for="">School Location</label>
+                    <input type="email" id="ThirdScLoc" placeholder="Enter Location" required>
+                    </div>
+                </div>
+
+                
+                <div class="fields">
+                    <div class="input-field">
+                        <label for="">Start Month<span class="required">*</span></label>
+                        <select name="" id="ThirdEduSM" class="dropdown">
+                            <option value="">Select Month</option>
+                            <option value="Jan">January</option>
+                            <option value="Feb">February</option>
+                            <option value="Mar">march</option>
+                            <option value="Apr">April</option>
+                            <option value="May">May</option>
+                            <option value="Jun">June</option>
+                            <option value="Jul">July</option>
+                            <option value="Aug">August</option>
+                            <option value="Sep">September</option>
+                            <option value="Oct">October</option>
+                            <option value="Nov">November</option>
+                            <option value="Dec">December</option>
+                        </select>
+                    </div>
+                
+                    <div class="input-field">
+                        <label for="">Start Year<span class="required">*</span></label>
+                    <input type="number" id="ThirdEduSY" placeholder="Enter year" required>
+                    </div>
+                
+                    <div class="input-field">
+                        <label for="">End Month<span class="required">*</span></label>
+                        <select name="" id="ThirdEduEM" class="dropdown">
+                            <option value="">Select Month</option>
+                            <option value="Jan">January</option>
+                            <option value="Feb">February</option>
+                            <option value="Mar">march</option>
+                            <option value="Apr">April</option>
+                            <option value="May">May</option>
+                            <option value="Jun">June</option>
+                            <option value="Jul">July</option>
+                            <option value="Aug">August</option>
+                            <option value="Sep">September</option>
+                            <option value="Oct">October</option>
+                            <option value="Nov">November</option>
+                            <option value="Dec">December</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="fields">
+                    <div class="input-field">
+                        <label for="">End Year<span class="required">*</span></label>
+                    <input type="number" id="ThirdEduEY" placeholder="Enter " required>
+                    </div>
+                
+                    <div class="input-field">
+                        <label for="">Field of study<span class="required">*</span></label>
+                    <input type="text" id="ThirdFieldOfStudy" placeholder="Enter Field of Study" required>
+                    </div>
+                
+                    <div class="input-field">
+                        <label for="">Persentage / CGPA<span class="required">*</span></label>
+                    <input type="number" id="ThirdPersentCGPA" placeholder="City Pincode" required>
+                    </div>
+                </div>
+        <!--add Education btn-->
+                <!-- <p id="add-education" onclick="addEducationElements()"><span class="addPlus">&#43</span> Add Education </p> -->
+                <hr>
+            </div>
+        </div>
+<!-- code for experience -->
+<div class="form first experience hidden " id="Expirence-Form">
+    
+    <div class="details personal">
+         <span class="title">EXPERIENCE</span>
+         <div class="fields">
+            <div class="input-field">
+                <label for="">Position<span class="required">*</span></label>
+               <input type="text" id="FirstExpPosition" placeholder="Enter Position" required>
+            </div>
+         
+            <div class="input-field">
+                <label for="">Company Name<span class="required">*</span></label>
+               <input type="text" id="FirstExpCompNam" placeholder="Enter Company Name" required>
+            </div>
+         
+            <div class="input-field">
+                <label for="">Start Month<span class="required">*</span></label>
+                <select name="" id="FirstExpSM" class="dropdown">
+                    <option value="">Select Month</option>
+                    <option value="Jan">January</option>
+                    <option value="Feb">February</option>
+                    <option value="Mar">march</option>
+                    <option value="Apr">April</option>
+                    <option value="May">May</option>
+                    <option value="Jun">June</option>
+                    <option value="Jul">July</option>
+                    <option value="Aug">August</option>
+                    <option value="Sep">September</option>
+                    <option value="Oct">October</option>
+                    <option value="Nov">November</option>
+                    <option value="Dec">December</option>
+                </select>
+            </div>
+         </div>
+
+         
+         <div class="fields">
+            <div class="input-field">
+                <label for="">Start Year<span class="required">*</span></label>
+               <input type="number" id="FirstExpSY" placeholder="Enter Start Year" required>
+            </div>
+         
+            <div class="input-field">
+                <label for="">End Month<span class="required">*</span></label>
+                <select name="" id="txtPanMonth"  class="dropdown" >
+                    <option value="">Select Month</option>
+                    <option value="Jan">January</option>
+                    <option value="Feb">February</option>
+                    <option value="Mar">march</option>
+                    <option value="Apr">April</option>
+                    <option value="May">May</option>
+                    <option value="Jun">June</option>
+                    <option value="Jul">July</option>
+                    <option value="Aug">August</option>
+                    <option value="Sep">September</option>
+                    <option value="Oct">October</option>
+                    <option value="Nov">November</option>
+                    <option value="Dec">December</option>
+                </select>
+            </div>
+            
+         
+            <div class="input-field">
+                <label for="">End Year<span class="required">*</span></label>
+               <input type="number" id="txtPanYear" placeholder="Enter End Year" required>
+            </div>
+            
+         </div>
+         <div class="checkbox">
+            <input type="checkbox" name="chkPan" id="chkPan" onclick="validate()">
+            <label for="">I Currently Work here</label>
+        </div>
+        <div class="ExpSert-container">
+            <div onclick="addMoreExperience(),setLog(1)" class="addmoreExperience" id="addMoreExperience-btn">
+                <span>&#43</span>
+                <span>Add more Experience</span>
+            </div>
+            <div onclick="addSertification()" class="addmoreExperience certificate" id="addSertification-btn">
+                <span>&#43</span>
+                <span>Add Sertification</span>
+            </div>
+        </div>
+        
+       <hr>
+       <!-- Adding 2nd  experience ---->
+     <div class="details personal expirence hidden" id="experience2">
+       <div class="experience2-container" id="exp2-container"> 
+          <span class="title">EXPERIENCE 2</span>
+          <span id="exp2-close-btn" onclick="deleteExp2(),setLog(0)">&#215</span>
+      </div>
+        <div class="fields">
+           <div class="input-field">
+               <label for="">Position<span class="required">*</span></label>
+              <input type="text" id="SecondExpPosition" placeholder="Enter Position" required>
+           </div>
+        
+           <div class="input-field">
+               <label for="">Company Name<span class="required">*</span></label>
+              <input type="text" id="SecondExpCompNam" placeholder="Enter Company Name" required>
+           </div>
+        
+           <div class="input-field">
+               <label for="">Start Month<span class="required">*</span></label>
+               <select name="" id="SecondExpSM" class="dropdown">
+                   <option value="">Select Month</option>
+                   <option value="Jan">January</option>
+                   <option value="Feb">February</option>
+                   <option value="Mar">march</option>
+                   <option value="Apr">April</option>
+                   <option value="May">May</option>
+                   <option value="Jun">June</option>
+                   <option value="Jul">July</option>
+                   <option value="Aug">August</option>
+                   <option value="Sep">September</option>
+                   <option value="Oct">October</option>
+                   <option value="Nov">November</option>
+                   <option value="Dec">December</option>
+               </select>
+           </div>
+        </div>
+
+        
+        <div class="fields">
+           <div class="input-field">
+               <label for="">Start Year<span class="required">*</span></label>
+              <input type="number" id="SecondExpSY" placeholder="Enter Start Year" required>
+           </div>
+        
+           <div class="input-field">
+               <label for="">End Month<span class="required">*</span></label>
+               <select name="" id="txtPanMonth2"  class="dropdown" >
+                   <option value="">Select Month</option>
+                   <option value="Jan">January</option>
+                   <option value="Feb">February</option>
+                   <option value="Mar">march</option>
+                   <option value="Apr">April</option>
+                   <option value="May">May</option>
+                   <option value="Jun">June</option>
+                   <option value="Jul">July</option>
+                   <option value="Aug">August</option>
+                   <option value="Sep">September</option>
+                   <option value="Oct">October</option>
+                   <option value="Nov">November</option>
+                   <option value="Dec">December</option>
+               </select>
+           </div>
+           
+        
+           <div class="input-field">
+               <label for="">End Year<span class="required">*</span></label>
+              <input type="number" id="txtPanYear2" placeholder="Enter End Year" required>
+           </div>
+           
+        </div>
+        <div class="checkbox">
+           <input type="checkbox" name="chkPan" id="chkPan2" onclick="validate2()">
+           <label for="">I Currently Work here</label>
+       </div>
+      <hr>
+    </div>
+     <!-- Adding one more experience end -->
+
+     <!--Adding Sertification-->
+     <div class="details personal expirence hidden " id="certificateSec">
+        <div class="experience2-container" id="exp2-container"> 
+           <span class="title">CERTIFICATION</span>
+           <span id="sertification-close-btn" onclick="deletecertificate(),setLo(0)">&#215</span>
+       </div>
+         <div class="fields">
+            <div class="input-field">
+                <label for="">Sertificate Name<span class="required">*</span></label>
+               <input type="text" id="Certification-Name" placeholder="Enter Sertificate Name" required>
+            </div>
+         
+            <div class="input-field">
+                <label for="">Organisation Name<span class="required">*</span></label>
+               <input type="text" id="Certi-Org-name" placeholder="Enter Organisation" required>
+            </div>
+         
+            <div class="input-field">
+                <label for="">Completion Date<span class="required">*</span></label>
+                <input id="Certi-complition-date" type="month" placeholder="yyyy-mm">
+            </div>
+         </div>
+ 
+         
+         <div class="fields">
+            <div class="input-field">
+                <label for="">Duration( In Month )<span class="required">*</span></label>
+               <input type="number" id="certificate-Duration" placeholder="Enter Months" required>
+            </div>            
+         </div>
+
+         <div class="checkbox">
+            <input type="checkbox" name="chkPan" id="chkPan3" onclick="chkValidateCerti()">
+            <label for="">I Currently Studying here</label>
+        </div>
+       <hr>
+     </div>
+     <!--Adding Sertification End-->
+
+        <!-- Adding skills tag -->
+        <span class="title skill">SKILLS</span>
+        <div class="skill-container" id="tagForm">
+            <!-- <form action="" name="skill-form"> -->
+                <div class="tag-container">
+                    <label for="" id="error" id="error"></label>
+                    <div class="input-container">
+                         <input type="text"  id="name" placeholder="Enter Skills...">
+                         <button type="button" value="clear" id="btnClick" onclick="addMore()">Add</button>
+                        
+                    </div>
+                    <div>
+                        <ul class="tags" id="box">
+
+                       
+                        </ul> 
+                    </div>
+                </div>
+            <!-- </form> -->
+        </div>
+     </div>
+     <div class="btn submit">
+        <!--  -->
+        <button type="button" id="Experience-back-btn" onclick="goBackFromExperience()"><span>&#8592</span> Back</button>
+        <button type="button" id="Experience-next-btn"
+         onclick="goNextFromExperience(),setExperience(1),setskilltoTemplate(),setCertificationToTemplate()">Submit<span></span></button>
+     </div>
+</div>
+                         
+<!-- code for experience -->
+        </form>
+        <div class="both-btn hidden btn" id="btn-next-prev">
+            <button type="button" id="second-next-btn" class="experience-btn"><span>&#8592</span> Back</button>
+            <button type="button" id="education-next-btn" class="experience-btn" onclick="goToExpirence(),setEducationDetains()">Next <span >&#8594</span></button>
+         </div>
+    </div>
+
+<!-- Download Resume section -->
+    <div class="template-main-container hidden" id="template-main-container">
+        <div class="template-container" id="ResumeContent">
+<!-- template left side  -->
+            <div class="leftside">
+                <div class="profile-image">
+                    <img src="" alt="" id="MyImage-profile">
+                </div>
+
+                <div class="about-me">
+                    <h2 class="left about heading">ABOUT ME</h2>
+                    <p id="AboutMeT">I compleated My degree in BCA i have few months of
+                     training experience in mindtree and i am good communicator</p>
+                </div>
+
+                <div class="template-contact">
+                    <h2 class="left contact heading">CONTACT</h2>
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span id="HomeAddress">Indi Road vijayapur</span>
+                        <span id="MyPinCodes">586101</span>
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-phone"></i><span id="MobileNo">  +91 7975357744</span>
+                    </p>
+                    <p class="email">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span id="EmailT">praveenduniya661@gmail.com</span>
+                    </p>
+                </div>
+
+                <div class="skills">
+                    <h2 class="left skill heading">SKILLS</h2>
+                    <ul id="skill-container">
+                    <!--Dynamically added-->
+                        <!-- <li id="ski0"></li>
+                        <li id="ski1"></li>
+                        <li id="ski2"></li>
+                        <li id="ski3"></li>
+                        <li id="ski4"></li>
+                        <li id="ski5"></li> -->
+                    </ul>
+                </div>
+            </div>
+<!-- template right side  -->
+            <div class="rightside">
+               <div class="myname-container">
+                  <h1 id="myName">PRAVEEN HIREMATH</h1>
+                  <h3 id="resume-title">Computer Application</h3>
+               </div>
+   
+               <div class="template-career-objective">
+                   <h3 class="career objective heading"><span>CAREER OBJECTIVE</span></h3>
+                   <p id="CareerObjectiveT">Lorem ipsum dolor sit, amet consectetur adipisicing elit. At labore excepturi cumque officia nesciunt! Non alias dolores ad possimus.</p>
+               </div>
+   <!-- Education Section -->
+               <div class="right-field education">
+                   <h3 class="education heading"><span>EDUCATION</span></h3>
+                   <div class="education-container">
+                       <div id="year">
+                           <h2 id="FirstEduYear">2016</h2>
+                           <div class="total-tear-cal">
+                             <span id="F-total-year"  class="year-number">2</span>
+                             <span class="year-label"></span>
+                           </div>
+                       </div>
+                       <!-- 1 -->
+                       <div id="degree">
+                          <div class="field-score-container">
+                            <h4 id="FirstEduDegree">10th</h4>
+                            <span id="First-field-of-study">science</span>
+                            <div class="score-container"><h3 id="F-score-percent">74</h3><h3></h3></div>
+                          </div>
+                          <p id="FirstEduSchool">S S High school</p>
+                       </div>
+                   </div>
+                   <!-- 2 -->
+                   <div class="education-container">
+                       <div id="year">
+                        <!-- 2018 -->
+                           <h2 id="SecondEduYear"></h2>
+                           <div class="total-tear-cal">
+                            <span id="S-total-year" class="year-number"></span>
+                            <span class="year-label"></span>
+                          </div>
+                       </div>
+                       <div id="degree">
+                           <div class="field-score-container">
+                            <!-- PUC -->
+                            <h4 id="SecondEduDegree"></h4>
+                            <!-- science -->
+                            <span id="second-field-of-study"></span>
+                            <!-- 74 -->
+                            <div class="score-container"><h3 id="S-score-percent"></h3><h3></h3></div>
+                           </div>
+                           <!-- S S science & Arts college -->
+                           <p id="SecondEduSchool"></p>
+                       </div>
+                   </div>
+                   <!-- 3 -->
+                   <div class="education-container">
+                       <div id="year">
+                        <!-- 2021 -->
+                           <h2 id="ThirdEduYear"></h2>
+                           <div class="total-tear-cal">
+                            <span id="T-total-year"  class="year-number"></span>
+                            <span class="year-label"></span>
+                          </div>
+                       </div>
+                       <div id="degree">
+                           <div class="field-score-container">
+                            <!-- BACHELOR DEGREE -->
+                             <h4 id="ThirdEduDegree"></h4>
+                             <!-- science -->
+                             <span id="Third-field-of-study"> </span>
+                             <!-- 74 -->
+                             <div class="score-container"><h3 id="T-score-percent"></h3><h3></h3></div>
+                           </div>
+                           <!-- BCA, Vedant college vijayapur -->
+                           <p id="ThirdEduSchool"></p>
+                       </div>
+                   </div>
+               </div>
+   
+   <!-- Experience section -->
+                   <div class=" right-field expirence">
+                       <h3 class="experience heading"><span>EXPERIENCE</span></h3>
+                       <!-- 1 -->
+                       <div class="education-container">
+                           <div id="year">
+                               <h2 id="First-Exp-End-Year">2022</h2>
+                           </div>
+                           <div id="degree">
+                               <h4 id="First-Exp-Pos">APPRENTISE</h4>
+                               <h4 id="First-Company-Name" class="Company-Name">Mindtree</h4>
+                               <p id="First-Exp-Year" class="Exp-Year"><span id="First-Exp-year" class="total-exp-year"></span></p>
+                           </div>
+                       </div>
+                       <!-- 2 -->
+                       <div class="education-container">
+                           <div id="year">
+                               <h2  id="Second-Exp-End-Year"></h2>
+                           </div>
+                           <div id="degree">
+                               <h4 id="Second-Exp-Pos"></h4>
+                               <h4 id="Second-Company-Name" class="Company-Name"></h4>
+                               <p id="First-Exp-Year" class="Exp-Year"><span id="Second-Exp-year" class="total-exp-year" ></span></p>
+                           </div>
+                       </div>
+                   </div>
+                    
+                <!--Certification -->
+                   <div class="certification-container hidden" id="Certificate-Main-Container">
+                    <h3 class="experience heading"><span>CERTIFICATION</span></h3>
+                     <div class="Certificate-info-container">
+                        <div class="Certi-info-titlt">
+                            <h3 id="Certification-Name-T" >Full Stack Developer</h3>
+                            <h4 id="Certificate-org-name">Kodnest</h4>
+                        </div>
+                        <div class="certi-date">
+                            <h2 id="certification-date">Jan-2023</h2>
+                            <h5 id="certification-duration">6 Months</h5>
+                        </div>
+                     </div>
+                   </div>
+                <!-- Certification End-->
+
+                <!-- Hobbies -->
+                 <div class="interset-container">
+                   <h3 class="interest heading"><span>HOBBIES</span></h3>
+                   <div class="list-interest" id="Hobbie-container">
+                       <!-- <h4>Drawing</h4>
+                       <h4>Singing</h4>
+                       <h4>Reading</h4>
+                       <h4>watching Web series</h4> -->
+                   </div>
+                 </div>
+           </div>
+            </div>
+            <div class="download-btn" id="resume-download-btn">
+                <button id="download-btn" onclick="downloadResume()">Download</button>
+            </div>
+        </div>
+    <!-- </div> -->
+    <!-- Download Resume section -->
+</body>
+<script src="template1.js"></script>
+
+<script src="form.js"></script>
+
+
+</html>
